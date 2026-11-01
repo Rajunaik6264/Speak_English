@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Speak English with Confidence</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&family=Noto+Sans+Kannada:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8fc;--card:#fff;--ink:#14213d;--mute:#5b6478;--line:#dde3ef;--brand:#1d3a8a;--onbrand:#fff;--gold:#f2a900;--good:#1e8e5a;--goodbg:#e3f5ec;--warnbg:#fff3d6;--me:#e6ecfb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1526;--card:#182038;--ink:#eef1fa;--mute:#a3acc4;--line:#2a3558;--brand:#8fb0ff;--onbrand:#0f1526;--good:#5fd6a0;--goodbg:#143b2b;--warnbg:#3d3213;--me:#22305a}}
+:root[data-theme="dark"]{--bg:#0f1526;--card:#182038;--ink:#eef1fa;--mute:#a3acc4;--line:#2a3558;--brand:#8fb0ff;--onbrand:#0f1526;--good:#5fd6a0;--goodbg:#143b2b;--warnbg:#3d3213;--me:#22305a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Telugu","Noto Sans Kannada","Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;font-size:17px}
+main{max-width:520px;margin:0 auto;height:100%;display:flex;flex-direction:column;padding:12px 14px}
+.scr{flex:1;overflow-y:auto;min-height:0}
+.hidden{display:none!important}
+h1{font-size:25px;line-height:1.25;margin:8px 0 6px}
+p.sub{color:var(--mute);margin:0 0 18px}
+button{font:inherit;cursor:pointer;border:0;border-radius:14px;min-height:50px;padding:10px 16px;font-weight:700}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.list{display:grid;gap:12px}
+.list button{background:var(--card);color:var(--ink);border:2px solid var(--line);font-size:21px;text-align:left}
+.list small{display:block;font-size:14px;color:var(--mute);font-weight:400}
+details.cat{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:4px 12px;margin-bottom:10px}
+details.cat summary{cursor:pointer;font-weight:700;font-size:20px;min-height:48px;display:flex;align-items:center}
+details.cat .list{padding:4px 0 12px}
+details.cat .list button{font-size:18px;background:var(--bg)}
+.today{background:var(--goodbg);border-radius:16px;padding:12px 14px;margin-bottom:12px}
+.today .lbl{color:var(--mute);font-size:15px;margin-bottom:6px}
+.tbtn{width:100%;background:var(--gold);color:#14213d;font-size:19px;text-align:left}
+.top{display:flex;justify-content:space-between;align-items:center;min-height:44px}
+.link{background:none;color:var(--brand);min-height:44px;padding:6px 2px}
+#msgs{flex:1;overflow-y:auto;min-height:0;padding:6px 0}
+.b{border-radius:18px;padding:12px 14px;margin:10px 0;max-width:92%}
+.ai{background:var(--card);border:2px solid var(--line)}
+.me{background:var(--me);margin-left:auto}
+.en{font-size:21px;font-weight:700;line-height:1.35}
+.hn{color:var(--brand);margin-top:4px}
+.mini{min-height:40px;padding:4px 12px;background:var(--gold);color:#14213d;margin-top:6px}
+.fbk{background:var(--goodbg);border-radius:14px;padding:10px 14px;margin:8px 0}
+.fx{margin-top:6px;background:var(--warnbg);border-radius:10px;padding:8px 10px}
+.why{color:var(--mute);font-size:15px;margin-top:2px}
+.think{color:var(--mute)}
+#chips{padding:4px 0}
+#chips .lbl{color:var(--mute);font-size:14px}
+#chips button{background:var(--card);color:var(--ink);border:2px solid var(--gold);margin:4px 6px 0 0;min-height:44px;font-weight:600;text-align:left}
+.bar2{padding-top:6px}
+#mic{width:100%;background:var(--brand);color:var(--onbrand);font-size:20px;min-height:58px}
+#mic.rec{animation:p 1s infinite}
+@keyframes p{50%{opacity:.55}}
+@media (prefers-reduced-motion:reduce){#mic.rec{animation:none}}
+.row{display:flex;gap:8px;margin-top:8px}
+.row input{flex:1;min-width:0;font:inherit;padding:10px 12px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--ink)}
+.row button{background:var(--ink);color:var(--bg)}
+.end{text-align:center;background:var(--goodbg);border-radius:16px;padding:16px;margin:10px 0}
+.lk{display:block;text-decoration:none;text-align:center;border-radius:14px;padding:14px;font-weight:700;margin-top:10px;background:var(--gold);color:#14213d}
+.go{width:100%;margin-top:10px;background:var(--ink);color:var(--bg)}
+</style>
+</head>
+<body>
+<main>
+<section id="s1" class="scr">
+  <h1>Speak English with confidence<br><span style="font-weight:400;font-size:19px;color:var(--mute)">ఇంగ్లీష్ · ಇಂಗ್ಲಿಷ್ · अंग्रेज़ी</span></h1>
+  <p class="sub">Choose your language · మీ భాష · ನಿಮ್ಮ ಭಾಷೆ · अपनी भाषा</p>
+  <div class="list" id="langs">
+    <button data-l="te">తెలుగు<small>Telugu</small></button>
+    <button data-l="kn">ಕನ್ನಡ<small>Kannada</small></button>
+    <button data-l="hi">हिन्दी<small>Hindi</small></button>
+  </div>
+</section>
+
+<section id="s2" class="scr hidden">
+  <div class="top"><button class="link" id="chg"></button></div>
+  <h1 id="picks"></h1>
+  <p class="sub" id="pg"></p>
+  <div id="td" class="today"></div>
+  <div class="list" id="scn"></div>
+</section>
+
+<section id="s3" class="hidden" style="flex:1;display:flex;flex-direction:column;min-height:0">
+  <div class="top"><button class="link" id="back"></button><button class="link" id="stop"></button><span id="cnt" style="color:var(--mute)"></span></div>
+  <div id="msgs"></div>
+  <div id="chips"></div>
+  <div class="bar2" id="bar">
+    <button id="mic"></button>
+    <div class="row"><input id="txt" autocomplete="off"><button id="send"></button></div>
+  </div>
+</section>
+</main>
+
+<script>
+/* ===== SETUP (only for your own website): fill after you create the accounts ===== */
+var GC_CODE="YOUR_GOATCOUNTER_CODE";
+var FORM_LINK="YOUR_GOOGLE_FORM_LINK";
+/* ================================================================================ */
+if(GC_CODE.indexOf("YOUR_")!==0){var gs=document.createElement("script");gs.async=true;gs.src="https://gc.zgo.at/count.js";gs.setAttribute("data-goatcounter","https://"+GC_CODE+".goatcounter.com/count");document.head.appendChild(gs)}
+function track(n){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:"event/"+n,title:n,event:true})}catch(e){}}
+
+var UI={
+te:{today:"ఈ రోజు పాఠం",streak:"రోజులు వరుసగా",stop:"ముగించు",chg:"← భాష మార్చండి",picks:"ఎక్కడ మాట్లాడదాం?",back:"← వెనక్కి",tap:"🎤 నొక్కి మాట్లాడండి",listening:"🎤 వింటున్నాను…",typeph:"లేదా ఇక్కడ టైప్ చేయండి",send:"పంపండి",say:"ఇలా చెప్పవచ్చు:",better:"ఇలా చెప్పడం మంచిది:",think:"ఆలోచిస్తున్నాను…",err:"ఇప్పుడు కనెక్ట్ కాలేదు. కొంచెం తర్వాత మళ్ళీ ప్రయత్నించండి.",endt:"అద్భుతం! మీరు పూర్తి సంభాషణ చేశారు.",again:"మళ్ళీ మొదలు పెట్టండి",fbk:"ఇది ఉపయోగపడిందా? మాకు చెప్పండి"},
+kn:{today:"ಇಂದಿನ ಪಾಠ",streak:"ದಿನಗಳು ಸತತವಾಗಿ",stop:"ಮುಗಿಸಿ",chg:"← ಭಾಷೆ ಬದಲಿಸಿ",picks:"ಎಲ್ಲಿ ಮಾತನಾಡೋಣ?",back:"← ಹಿಂದೆ",tap:"🎤 ಒತ್ತಿ ಮಾತನಾಡಿ",listening:"🎤 ಕೇಳುತ್ತಿದ್ದೇನೆ…",typeph:"ಅಥವಾ ಇಲ್ಲಿ ಟೈಪ್ ಮಾಡಿ",send:"ಕಳುಹಿಸಿ",say:"ಹೀಗೆ ಹೇಳಬಹುದು:",better:"ಹೀಗೆ ಹೇಳುವುದು ಉತ್ತಮ:",think:"ಯೋಚಿಸುತ್ತಿದ್ದೇನೆ…",err:"ಈಗ ಸಂಪರ್ಕ ಆಗಲಿಲ್ಲ. ಸ್ವಲ್ಪ ಹೊತ್ತಿನ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",endt:"ಅದ್ಭುತ! ನೀವು ಪೂರ್ಣ ಸಂಭಾಷಣೆ ಮಾಡಿದಿರಿ.",again:"ಮತ್ತೆ ಶುರು ಮಾಡಿ",fbk:"ಇದು ಸಹಾಯ ಮಾಡಿತೇ? ನಮಗೆ ತಿಳಿಸಿ"},
+hi:{today:"आज का पाठ",streak:"दिन लगातार",stop:"समाप्त करें",chg:"← भाषा बदलें",picks:"कहाँ बात करें?",back:"← वापस",tap:"🎤 दबाकर बोलें",listening:"🎤 सुन रहा हूँ…",typeph:"या यहाँ टाइप करें",send:"भेजें",say:"आप ऐसा कह सकते हैं:",better:"ऐसे कहना बेहतर है:",think:"सोच रहा हूँ…",err:"अभी कनेक्ट नहीं हो पाया। थोड़ी देर बाद फिर कोशिश करें।",endt:"शाबाश! आपने पूरी बातचीत की।",again:"फिर से शुरू करें",fbk:"क्या इससे मदद मिली? हमें बताइए"}
+};
+var CATS=[
+{e:"🛒",n:["Shopping","షాపింగ్","ಶಾಪಿಂಗ್","खरीदारी"],i:["🥬|Buying vegetables|కూరగాయలు కొనడం|ತರಕಾರಿ ಖರೀದಿ|सब्ज़ी खरीदना","👕|Buying clothes|బట్టలు కొనడం|ಬಟ್ಟೆ ಖರೀದಿ|कपड़े खरीदना","🛒|Grocery shop|కిరాణా షాప్|ಕಿರಾಣಿ ಅಂಗಡಿ|किराना दुकान","💊|At the medical shop|మందుల షాప్‌లో|ಮೆಡಿಕಲ್ ಶಾಪ್‌ನಲ್ಲಿ|दवा की दुकान पर","📱|Buying a mobile phone|మొబైల్ ఫోన్ కొనడం|ಮೊಬೈಲ್ ಫೋನ್ ಖರೀದಿ|मोबाइल फ़ोन खरीदना","👟|Buying shoes|చెప్పులు కొనడం|ಚಪ್ಪಲಿ ಖರೀದಿ|जूते-चप्पल खरीदना","🍎|Buying fruits|పండ్లు కొనడం|ಹಣ್ಣು ಖರೀದಿ|फल खरीदना","⛽|At the petrol pump|పెట్రోల్ బంక్‌లో|ಪೆಟ್ರೋಲ್ ಬಂಕ್‌ನಲ್ಲಿ|पेट्रोल पंप पर","🔁|Returning an item|వస్తువు తిరిగి ఇవ్వడం|ವಸ್ತು ಹಿಂತಿರುಗಿಸುವುದು|सामान वापस करना","💈|At the salon|సెలూన్‌లో|ಸಲೂನ್‌ನಲ್ಲಿ|सैलून में"]},
+{e:"🚌",n:["Travel","ప్రయాణం","ಪ್ರಯಾಣ","यात्रा"],i:["🚌|Buying a bus ticket|బస్ టికెట్ కొనడం|ಬಸ್ ಟಿಕೆಟ್ ಖರೀದಿ|बस का टिकट लेना","🚆|Train enquiry|రైలు వివరాలు అడగడం|ರೈಲು ವಿಚಾರಣೆ|ट्रेन की जानकारी पूछना","🛺|Hiring an auto|ఆటో మాట్లాడుకోవడం|ಆಟೋ ಬಾಡಿಗೆ|ऑटो करना","🧭|Asking for directions|దారి అడగడం|ದಾರಿ ಕೇಳುವುದು|रास्ता पूछना","🏨|Hotel check-in|హోటల్ గది తీసుకోవడం|ಹೋಟೆಲ್ ಕೊಠಡಿ ಪಡೆಯುವುದು|होटल में कमरा लेना","✈️|At the airport|ఎయిర్‌పోర్ట్‌లో|ವಿಮಾನ ನಿಲ್ದಾಣದಲ್ಲಿ|हवाई अड्डे पर","🎫|Booking tickets online|ఆన్‌లైన్ టికెట్ బుక్ చేయడం|ಆನ್‌ಲೈನ್ ಟಿಕೆಟ್ ಬುಕ್ ಮಾಡುವುದು|ऑनलाइन टिकट बुक करना","🧳|Lost luggage|సామాను పోవడం|ಸಾಮಾನು ಕಳೆದುಹೋಗುವುದು|सामान खो जाना","🛣️|Travelling with a friend|స్నేహితుడితో ప్రయాణం|ಸ್ನೇಹಿತನ ಜೊತೆ ಪ್ರಯಾಣ|दोस्त के साथ सफ़र","🚖|Booking a taxi|టాక్సీ బుక్ చేయడం|ಟ್ಯಾಕ್ಸಿ ಬುಕ್ ಮಾಡುವುದು|टैक्सी बुक करना"]},
+{e:"🏥",n:["Health","ఆరోగ్యం","ಆರೋಗ್ಯ","स्वास्थ्य"],i:["🤒|Telling the doctor your problem|డాక్టర్‌కు సమస్య చెప్పడం|ವೈದ್ಯರಿಗೆ ಸಮಸ್ಯೆ ಹೇಳುವುದು|डॉक्टर को समस्या बताना","🏥|Hospital registration|ఆసుపత్రిలో పేరు నమోదు|ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ನೋಂದಣಿ|अस्पताल में पंजीकरण","💊|Medicine advice|మందులు వాడే విధానం|ಔಷಧ ಬಳಕೆ ಸಲಹೆ|दवा लेने की सलाह","🚑|Calling an ambulance|అంబులెన్స్‌కు ఫోన్|ಆಂಬುಲೆನ್ಸ್‌ಗೆ ಕರೆ|एम्बुलेंस बुलाना","🦷|At the dentist|దంత వైద్యుని దగ్గర|ದಂತ ವೈದ್ಯರ ಬಳಿ|दाँत के डॉक्टर के पास","👶|Child's check-up|పిల్లల చెకప్|ಮಕ್ಕಳ ತಪಾಸಣೆ|बच्चे का चेकअप","🧪|Blood test|రక్త పరీక్ష|ರಕ್ತ ಪರೀಕ್ಷೆ|खून की जाँच","🤰|Pregnancy check-up|గర్భిణీ చెకప్|ಗರ್ಭಿಣಿ ತಪಾಸಣೆ|गर्भावस्था की जाँच","👁️|Eye check-up|కంటి పరీక్ష|ಕಣ್ಣಿನ ತಪಾಸಣೆ|आँखों की जाँच","🧘|Healthy habits|ఆరోగ్య అలవాట్లు|ಆರೋಗ್ಯಕರ ಅಭ್ಯಾಸಗಳು|सेहतमंद आदतें"]},
+{e:"💼",n:["Work","ఉద్యోగం","ಉದ್ಯೋಗ","काम"],i:["💼|Job interview|ఉద్యోగ ఇంటర్వ్యూ|ಉದ್ಯೋಗ ಸಂದರ್ಶನ|नौकरी का इंटरव्यू","🙋|Introducing yourself|మీ గురించి చెప్పడం|ನಿಮ್ಮ ಬಗ್ಗೆ ಹೇಳುವುದು|अपना परिचय देना","📞|Answering a work call|ఆఫీస్ ఫోన్ కాల్|ಕೆಲಸದ ಕರೆ ಉತ್ತರಿಸುವುದು|काम का फ़ोन उठाना","🕒|Asking for leave|సెలవు అడగడం|ರಜೆ ಕೇಳುವುದು|छुट्टी माँगना","💰|Asking for a salary raise|జీతం పెంపు అడగడం|ಸಂಬಳ ಹೆಚ್ಚಳ ಕೇಳುವುದು|वेतन बढ़ाने को कहना","🧑‍🏭|Talking to your supervisor|సూపర్వైజర్‌తో మాట్లాడటం|ಮೇಲ್ವಿಚಾರಕರೊಂದಿಗೆ ಮಾತು|सुपरवाइज़र से बात करना","🤝|Meeting a new coworker|కొత్త సహోద్యోగిని కలవడం|ಹೊಸ ಸಹೋದ್ಯೋಗಿಯ ಭೇಟಿ|नए साथी से मिलना","📝|Applying for a job|ఉద్యోగానికి దరఖాస్తు|ಉದ್ಯೋಗಕ್ಕೆ ಅರ್ಜಿ|नौकरी के लिए आवेदन","🧾|Talking to a customer|కస్టమర్‌తో మాట్లాడటం|ಗ್ರಾಹಕರೊಂದಿಗೆ ಮಾತು|ग्राहक से बात करना","🏪|Starting a small business|చిన్న వ్యాపారం ప్రారంభం|ಸಣ್ಣ ವ್ಯಾಪಾರ ಆರಂಭ|छोटा व्यापार शुरू करना"]},
+{e:"🍽️",n:["Food","ఆహారం","ಆಹಾರ","खाना"],i:["🍽️|Ordering at a restaurant|రెస్టారెంట్‌లో ఆర్డర్|ರೆಸ್ಟೋರೆಂಟ್‌ನಲ್ಲಿ ಆರ್ಡರ್|रेस्टोरेंट में ऑर्डर","☕|At a tea shop|టీ కొట్టులో|ಚಹಾ ಅಂಗಡಿಯಲ್ಲಿ|चाय की दुकान पर","🛵|Food delivery call|ఫుడ్ డెలివరీ ఫోన్|ಫುಡ್ ಡೆಲಿವರಿ ಕರೆ|फ़ूड डिलीवरी कॉल","🍳|Cooking with a friend|స్నేహితునితో వంట|ಸ್ನೇಹಿತನೊಂದಿಗೆ ಅಡುಗೆ|दोस्त के साथ खाना बनाना","🥘|Inviting someone for dinner|భోజనానికి ఆహ్వానం|ಊಟಕ್ಕೆ ಆಹ್ವಾನ|खाने पर बुलाना","🍰|At a sweet shop|స్వీట్ షాప్‌లో|ಸಿಹಿ ಅಂಗಡಿಯಲ್ಲಿ|मिठाई की दुकान पर","💳|Paying the bill|బిల్లు చెల్లించడం|ಬಿಲ್ ಪಾವತಿ|बिल चुकाना","🌶️|Telling food preferences|ఆహారం ఇష్టాలు చెప్పడం|ಆಹಾರದ ಇಷ್ಟಗಳನ್ನು ಹೇಳುವುದು|खाने की पसंद बताना","🍱|Ordering for a party|పార్టీకి ఆర్డర్|ಪಾರ್ಟಿಗೆ ಆರ್ಡರ್|पार्टी के लिए ऑर्डर","😋|Complaining about food|భోజనం గురించి ఫిర్యాదు|ಊಟದ ಬಗ್ಗೆ ದೂರು|खाने की शिकायत"]},
+{e:"🏠",n:["Home and neighbours","ఇల్లు, పొరుగు","ಮನೆ, ನೆರೆಹೊರೆ","घर और पड़ोस"],i:["🏠|Meeting a new neighbour|కొత్త పొరుగువారిని కలవడం|ಹೊಸ ನೆರೆಯವರ ಭೇಟಿ|नए पड़ोसी से मिलना","🔧|Calling a plumber|ప్లంబర్‌కు ఫోన్|ಪ್ಲಂಬರ್‌ಗೆ ಕರೆ|प्लंबर को बुलाना","🏡|Renting a house|ఇల్లు అద్దెకు తీసుకోవడం|ಮನೆ ಬಾಡಿಗೆಗೆ ಪಡೆಯುವುದು|मकान किराए पर लेना","💡|Electricity problem|కరెంటు సమస్య|ವಿದ್ಯುತ್ ಸಮಸ್ಯೆ|बिजली की समस्या","🚰|Water problem|నీటి సమస్య|ನೀರಿನ ಸಮಸ್ಯೆ|पानी की समस्या","📦|Receiving a parcel|పార్శిల్ తీసుకోవడం|ಪಾರ್ಸೆಲ್ ಪಡೆಯುವುದು|पार्सल लेना","🐄|Talking about animals|జంతువుల గురించి మాట్లాడటం|ಪ್ರಾಣಿಗಳ ಬಗ್ಗೆ ಮಾತು|जानवरों के बारे में बात","🌧️|Talking about the weather|వాతావరణం గురించి మాట్లాడటం|ಹವಾಮಾನದ ಬಗ್ಗೆ ಮಾತು|मौसम की बात","🧹|Asking for help at home|ఇంట్లో సహాయం అడగడం|ಮನೆಯಲ್ಲಿ ಸಹಾಯ ಕೇಳುವುದು|घर में मदद माँगना","👪|Talking about your family|మీ కుటుంబం గురించి|ನಿಮ್ಮ ಕುಟುಂಬದ ಬಗ್ಗೆ|अपने परिवार के बारे में"]},
+{e:"🏦",n:["Money and banking","డబ్బు, బ్యాంక్","ಹಣ, ಬ್ಯಾಂಕ್","पैसा और बैंक"],i:["🏦|Opening a bank account|బ్యాంక్ ఖాతా తెరవడం|ಬ್ಯಾಂಕ್ ಖಾತೆ ತೆರೆಯುವುದು|बैंक खाता खोलना","💵|Withdrawing money|డబ్బు తీసుకోవడం|ಹಣ ಹಿಂಪಡೆಯುವುದು|पैसे निकालना","📲|Using UPI payment|UPI చెల్లింపు|UPI ಪಾವತಿ|UPI से भुगतान","💳|Lost ATM card|ATM కార్డు పోవడం|ATM ಕಾರ್ಡ್ ಕಳೆದುಹೋಗುವುದು|ATM कार्ड खो जाना","🏧|Using an ATM|ATM వాడటం|ATM ಬಳಸುವುದು|ATM इस्तेमाल करना","🏷️|Taking a small loan|చిన్న రుణం తీసుకోవడం|ಸಣ್ಣ ಸಾಲ ಪಡೆಯುವುದು|छोटा लोन लेना","🐖|Saving money|డబ్బు పొదుపు|ಹಣ ಉಳಿತಾಯ|पैसे बचाना","🧮|Bargaining a price|ధర బేరం|ಬೆಲೆ ಚೌಕಾಸಿ|भाव-ताव करना","🧾|Paying electricity bill|కరెంటు బిల్లు కట్టడం|ವಿದ್ಯುತ್ ಬಿಲ್ ಪಾವತಿ|बिजली बिल भरना","🔒|Online fraud call|మోసపు కాల్స్|ವಂಚನೆ ಕರೆ|धोखाधड़ी वाला कॉल"]},
+{e:"🏛️",n:["Government work","ప్రభుత్వ పనులు","ಸರ್ಕಾರಿ ಕೆಲಸ","सरकारी काम"],i:["🏛️|At the government office|ప్రభుత్వ కార్యాలయంలో|ಸರ್ಕಾರಿ ಕಚೇರಿಯಲ್ಲಿ|सरकारी दफ़्तर में","🪪|Applying for Aadhaar|ఆధార్ కోసం దరఖాస్తు|ಆಧಾರ್‌ಗೆ ಅರ್ಜಿ|आधार के लिए आवेदन","🗳️|Voter ID help|ఓటరు ఐడీ సహాయం|ಮತದಾರರ ಗುರುತಿನ ಚೀಟಿ ಸಹಾಯ|वोटर आईडी में मदद","📮|At the post office|పోస్టాఫీసులో|ಅಂಚೆ ಕಚೇರಿಯಲ್ಲಿ|डाकघर में","🚓|At the police station|పోలీస్ స్టేషన్‌లో|ಪೊಲೀಸ್ ಠಾಣೆಯಲ್ಲಿ|पुलिस थाने में","📄|Getting a certificate|సర్టిఫికెట్ తీసుకోవడం|ಪ್ರಮಾಣಪತ್ರ ಪಡೆಯುವುದು|प्रमाणपत्र बनवाना","🌾|At the ration shop|రేషన్ షాప్‌లో|ಪಡಿತರ ಅಂಗಡಿಯಲ್ಲಿ|राशन की दुकान पर","🖊️|Filling a form|ఫారం నింపడం|ಫಾರ್ಮ್ ತುಂಬುವುದು|फ़ॉर्म भरना","🏢|Meeting an officer|అధికారిని కలవడం|ಅಧಿಕಾರಿಯನ್ನು ಭೇಟಿಯಾಗುವುದು|अधिकारी से मिलना","🚦|Getting a driving licence|డ్రైవింగ్ లైసెన్స్ తీసుకోవడం|ಚಾಲನಾ ಪರವಾನಗಿ ಪಡೆಯುವುದು|ड्राइविंग लाइसेंस बनवाना"]},
+{e:"🎓",n:["Education","చదువు","ಓದು","पढ़ाई"],i:["🏫|Talking to a teacher|టీచర్‌తో మాట్లాడటం|ಶಿಕ್ಷಕರೊಂದಿಗೆ ಮಾತು|शिक्षक से बात करना","🎒|School admission|స్కూల్ అడ్మిషన్|ಶಾಲಾ ಪ್ರವೇಶ|स्कूल में दाखिला","📚|At the library|లైబ్రరీలో|ಗ್ರಂಥಾಲಯದಲ್ಲಿ|पुस्तकालय में","🎓|College admission|కాలేజీ అడ్మిషన్|ಕಾಲೇಜು ಪ್ರವೇಶ|कॉलेज में दाखिला","💻|Learning computers|కంప్యూటర్ నేర్చుకోవడం|ಕಂಪ್ಯೂಟರ್ ಕಲಿಯುವುದು|कंप्यूटर सीखना","🗣️|Joining an English class|ఇంగ్లీష్ క్లాస్‌లో చేరడం|ಇಂಗ್ಲಿಷ್ ತರಗತಿಗೆ ಸೇರುವುದು|अंग्रेज़ी क्लास में जुड़ना","📝|Talking about exams|పరీక్షల గురించి|ಪರೀಕ್ಷೆಗಳ ಬಗ್ಗೆ|परीक्षा के बारे में","🧑‍🎓|Asking a classmate for help|క్లాస్‌మేట్‌ను సహాయం అడగడం|ಸಹಪಾಠಿಯನ್ನು ಸಹಾಯ ಕೇಳುವುದು|सहपाठी से मदद माँगना","👨‍👩‍👧|Parent-teacher meeting|తల్లిదండ్రులు-టీచర్ సమావేశం|ಪೋಷಕ-ಶಿಕ್ಷಕರ ಸಭೆ|अभिभावक-शिक्षक बैठक","🏅|Applying for a scholarship|స్కాలర్‌షిప్ దరఖాస్తు|ವಿದ್ಯಾರ್ಥಿವೇತನಕ್ಕೆ ಅರ್ಜಿ|छात्रवृत्ति के लिए आवेदन"]},
+{e:"🤝",n:["People and festivals","ప్రజలు, పండుగలు","ಜನರು, ಹಬ್ಬಗಳು","लोग और त्योहार"],i:["👋|Greeting someone|పలకరించడం|ವಂದನೆ ಹೇಳುವುದು|अभिवादन करना","🎉|Festival wishes|పండుగ శుభాకాంక్షలు|ಹಬ್ಬದ ಶುಭಾಶಯ|त्योहार की शुभकामनाएँ","💒|Attending a wedding|పెళ్ళికి హాజరు|ಮದುವೆಗೆ ಹೋಗುವುದು|शादी में जाना","🎂|Birthday party|పుట్టినరోజు పార్టీ|ಹುಟ್ಟುಹಬ್ಬದ ಪಾರ್ಟಿ|जन्मदिन की पार्टी","📞|Making a phone call|ఫోన్ కాల్ చేయడం|ಫೋನ್ ಕರೆ ಮಾಡುವುದು|फ़ोन कॉल करना","🙏|Saying sorry and thanks|క్షమాపణ, ధన్యవాదాలు|ಕ್ಷಮೆ, ಧನ್ಯವಾದ|माफ़ी और धन्यवाद","🏏|Talking about cricket|క్రికెట్ గురించి|ಕ್ರಿಕೆಟ್ ಬಗ್ಗೆ|क्रिकेट के बारे में","🎬|Talking about movies|సినిమాల గురించి|ಸಿನಿಮಾ ಬಗ್ಗೆ|फ़िल्मों के बारे में","🧑‍🤝‍🧑|Making a new friend|కొత్త స్నేహితుడిని చేసుకోవడం|ಹೊಸ ಸ್ನೇಹಿತನನ್ನು ಮಾಡಿಕೊಳ್ಳುವುದು|नया दोस्त बनाना","🗓️|Weekend plans|వారాంతం ప్లాన్|ವಾರಾಂತ್ಯದ ಯೋಜನೆ|सप्ताहांत की योजना"]}
+];
+var SC=[];CATS.forEach(function(c,ci){c.i.forEach(function(x){var q=x.split("|");SC.push({cat:ci,e:q[0],en:q[1],te:q[2],kn:q[3],hi:q[4]})})});
+var CI={te:1,kn:2,hi:3},OPEN=0;
+var TW=["the other person is in a hurry today","one item or option is not available, so the learner must choose another","the price or time has changed from what the learner expected","the learner must ask the other person to repeat or explain something","the other person is very friendly and likes to chat a little","there is a small misunderstanding the learner must clear up","the learner must say what they like and do not like","the learner must ask a polite question about cost or time","the other person asks the learner about their family or village","something unexpected happens, such as rain or a power cut","the learner must make a polite request","the learner must thank the other person and say goodbye warmly"];
+function dayNum(){return Math.floor((Date.now()-new Date().getTimezoneOffset()*60000)/86400000)}
+function markDay(){var d=dayNum(),last=+load("lastDay")||0,st=+load("streak")||0;if(last===d)return;st=(last===d-1)?st+1:1;save("lastDay",String(d));save("streak",String(st))}
+function streak(){var d=dayNum(),last=+load("lastDay")||0,st=+load("streak")||0;return(last===d||last===d-1)?st:0}
+function getDone(){try{return JSON.parse(load("done100")||"[]")}catch(e){return[]}}
+var LN={te:"Telugu",kn:"Kannada",hi:"Hindi"};
+var INSTR="You are a warm, patient English speaking partner for adult beginners in rural India. The learner speaks LANG. Role-play: ROLE Rules: Use very simple English, at most WORDS words per reply, and ask only one easy question at a time. The learner's words come from speech recognition, so ignore capital letters, punctuation and small recognition errors. If the learner's sentence has a real mistake, correct at most ONE mistake; otherwise set fix to null. Never be harsh. Reply with ONLY valid JSON, no markdown, in exactly this shape: {\"reply\":\"your next English line\",\"hint\":\"the reply translated into LANG, written in LANG script\",\"praise\":\"one short encouraging sentence in LANG (empty string if the learner has not spoken yet)\",\"fix\":null or {\"better\":\"the corrected English sentence\",\"why\":\"one short simple reason in LANG\"},\"try\":[\"an easy English answer the learner could say\",\"another easy answer\"]}";
+var MAXT=50,fin=false,L=null,S=null,H=[],turns=0,busy=false,listening=false,rec=null,SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+function $(i){return document.getElementById(i)}
+function t(){return UI[L]}
+function el(tag,cls,txt,par){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;if(par)par.appendChild(e);return e}
+function save(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function show(id){["s1","s2","s3"].forEach(function(x){$(x).classList.add("hidden")});$(id).classList.remove("hidden");if(id==="s3")$(id).style.display="flex"}
+function say(txt){try{speechSynthesis.cancel();var m=new SpeechSynthesisUtterance(txt);m.lang="en-IN";m.rate=0.8;speechSynthesis.speak(m)}catch(e){}}
+function down(){var m=$("msgs");m.scrollTop=m.scrollHeight}
+
+function pickLang(l){
+  L=l;save("lang",l);document.documentElement.lang=l;var u=t();
+  $("chg").textContent=u.chg;$("picks").textContent=u.picks;$("back").textContent=u.back;
+  $("mic").textContent=u.tap;$("txt").placeholder=u.typeph;$("send").textContent=u.send;
+  var box=$("scn"),dn=getDone();box.textContent="";
+  $("pg").textContent="✅ "+dn.length+" / "+SC.length;
+  $("stop").textContent=u.stop;
+  var ti=dayNum()%SC.length,td=$("td");td.textContent="";
+  el("div","lbl","🔥 "+streak()+" "+u.streak,td);
+  var tb=el("button","tbtn",u.today+": "+SC[ti].e+" "+SC[ti][l],td);tb.onclick=function(){begin(ti)};
+  CATS.forEach(function(c,ci){
+    var d=el("details","cat",null,box);d.open=(ci===OPEN);
+    d.addEventListener("toggle",function(){if(d.open)OPEN=ci});
+    el("summary",null,c.e+" "+c.n[CI[l]],d);
+    var g=el("div","list",null,d);
+    SC.forEach(function(s,i){if(s.cat!==ci)return;
+      var b=el("button",null,(dn.indexOf(i)>-1?"✅ ":s.e+" ")+s[l],g);el("small",null,s.en,b);b.onclick=function(){begin(i)}});
+  });
+  show("s2");
+}
+function begin(i){
+  S=i;H=[];turns=0;busy=false;fin=false;$("msgs").textContent="";$("chips").textContent="";
+  $("bar").classList.remove("hidden");$("cnt").textContent="0 / "+MAXT;
+  track("language-"+L);track("scenario-"+(i+1));show("s3");step(null);
+}
+function buildPrompt(msg){
+  var tr=H.slice(-16).map(function(h){return (h.who==="ai"?"Partner: ":"Learner: ")+h.text}).join("\n");
+  var words=[12,16,20,25][Math.min(3,Math.floor(getDone().length/10))];
+  var tw=TW[(dayNum()+S)%TW.length];
+  return INSTR.replace(/LANG/g,LN[L]).replace("WORDS",words).replace("ROLE","Situation: "+SC[S].en+". Choose a natural role for yourself (for example seller, clerk, doctor, neighbour or friend); the learner plays themselves.")
+   +"\n\nThis is turn "+(turns+(msg?0:1))+" of "+MAXT+". Today's twist for variety: "+tw+". Move the conversation forward step by step like a real situation, never repeat earlier questions, bring in a new small event every few turns, and if the turn number is above "+(MAXT-6)+" start wrapping up politely."
+   +"\n\nConversation so far (latest lines only):\n"+(tr||"(none)")+"\n\n"+(msg?"Learner just said: "+msg:"Start the conversation: greet the learner and ask the first simple question.");
+}
+async function askAI(prompt){
+  var raw=null;
+  if(window.claude&&window.claude.use){
+    try{var sm=await window.claude.use("sample");if(sm){var r=await sm(prompt,{cache:false});raw=r.text}}catch(e){}
+  }
+  if(raw==null){
+    var res=await fetch("/.netlify/functions/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt:prompt})});
+    if(!res.ok)throw new Error("http");
+    raw=(await res.json()).text;
+  }
+  raw=String(raw||"").replace(/```json|```/g,"");
+  var a=raw.indexOf("{"),b=raw.lastIndexOf("}");
+  try{var o=JSON.parse(raw.slice(a,b+1));if(!o.reply)throw 0;return o}
+  catch(e){if(raw.trim())return{reply:raw.trim().slice(0,200),hint:"",praise:"",fix:null,try:[]};throw new Error("empty")}
+}
+async function step(msg){
+  if(busy||fin)return;busy=true;$("chips").textContent="";
+  var p=buildPrompt(msg),box=$("msgs");
+  if(msg){el("div","b me",msg,box);H.push({who:"me",text:msg});turns++;if(turns===1)markDay();$("cnt").textContent=turns+" / "+MAXT;track("turn")}
+  var th=el("div","think",t().think,box);down();
+  try{
+    var r=await askAI(p);th.remove();
+    if(msg&&(r.praise||(r.fix&&r.fix.better))){
+      var d=el("div","fbk",null,box);
+      if(r.praise)el("div",null,"👍 "+r.praise,d);
+      if(r.fix&&r.fix.better){
+        var f=el("div","fx",null,d);el("b",null,t().better+" ",f);el("span",null,r.fix.better,f);
+        var fb=el("button","mini","🔊",f);fb.onclick=function(){say(r.fix.better)};
+        if(r.fix.why)el("div","why",r.fix.why,f);
+      }
+    }
+    var a=el("div","b ai",null,box);el("div","en",r.reply,a);if(r.hint)el("div","hn",r.hint,a);
+    var lb=el("button","mini","🔊",a);lb.onclick=function(){say(r.reply)};
+    H.push({who:"ai",text:r.reply});say(r.reply);down();
+    if(turns>=MAXT){finish()}else if(r.try&&r.try.length){
+      var c=$("chips");el("div","lbl",t().say,c);
+      r.try.slice(0,2).forEach(function(x){var cb=el("button",null,x,c);cb.onclick=function(){say(x);$("txt").value=x}});
+    }
+  }catch(e){th.remove();el("div","why",t().err,box);down()}
+  busy=false;
+}
+function finish(){if(fin)return;fin=true;
+  track("conversation-complete");var dn=getDone();if(dn.indexOf(S)<0){dn.push(S);save("done100",JSON.stringify(dn))}$("bar").classList.add("hidden");$("chips").textContent="";
+  var e=el("div","end",null,$("msgs"));el("div","en","⭐⭐⭐",e);el("div",null,t().endt,e);
+  if(FORM_LINK.indexOf("YOUR_")!==0){var a=el("a","lk",t().fbk,e);a.href=FORM_LINK;a.target="_blank";a.rel="noopener"}
+  var g=el("button","go",t().again,e);g.onclick=function(){begin(S)};down();
+}
+function mic(){
+  if(busy||listening)return;
+  if(!SR){$("txt").focus();return}
+  try{
+    rec=new SR();rec.lang="en-IN";rec.interimResults=false;rec.maxAlternatives=1;
+    rec.onstart=function(){listening=true;$("mic").classList.add("rec");$("mic").textContent=t().listening};
+    rec.onend=function(){listening=false;$("mic").classList.remove("rec");$("mic").textContent=t().tap};
+    rec.onresult=function(e){step(e.results[0][0].transcript)};
+    rec.onerror=function(){$("txt").focus()};
+    rec.start();
+  }catch(e){$("txt").focus()}
+}
+function sendTxt(){var v=$("txt").value.trim();if(v){$("txt").value="";step(v)}}
+document.querySelectorAll("#langs button").forEach(function(b){b.onclick=function(){pickLang(b.dataset.l)}});
+$("stop").onclick=function(){if(!fin&&turns>0)finish()};
+$("chg").onclick=function(){show("s1")};
+$("back").onclick=function(){try{speechSynthesis.cancel()}catch(e){}pickLang(L)};
+$("mic").onclick=mic;$("send").onclick=sendTxt;
+$("txt").addEventListener("keydown",function(e){if(e.key==="Enter")sendTxt()});
+var saved=load("lang");if(saved&&UI[saved])pickLang(saved);
+</script>
+</body>
+</html>
